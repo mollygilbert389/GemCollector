@@ -23,6 +23,7 @@ $("#computerNum").text(computerGuess);
 //User clicks gems to get to randomized number //Gems have hidden values //the score shows what the current number the user is at
 
 checkScore = function(){
+    console.log(total, computerGuess)
     if (computerGuess < total){
         lose++;
         document.getElementById("lose").innerHTML = ("You Lose: " + lose)
@@ -41,21 +42,24 @@ checkScore = function(){
 //     }
 // };
 var gemReset = function () {
-    gem1 = Math.floor(Math.random() * 12)+1;
+    gem1 = Math.floor(Math.random() * 11)+1;
     gem1=Number(gem1);
-    gem2 = Math.floor(Math.random() * 12)+1;
+    gem2 = Math.floor(Math.random() * 11)+1;
     gem2=Number(gem2);
-    gem3 = Math.floor(Math.random() * 12)+1;
+    gem3 = Math.floor(Math.random() * 11)+1;
     gem3=Number(gem3);
-    gem4 = Math.floor(Math.random() * 12)+1;
+    gem4 = Math.floor(Math.random() * 11)+1;
     gem4=Number(gem4);
     console.log("gem1: " + gem1);
+    console.log("gem2: " + gem2);
+    console.log("gem3: " + gem3);
+    console.log("gem4: " + gem4);
 }
 
 // need to set the score back to 0 maybe need to add another function 
 var scoreReset = function () {
     if (total >= computerGuess){
-    computerGuess = [Math.floor(Math.random() * 103)+19];
+    computerGuess = (Math.floor(Math.random() * 103)+19);
     $("#computerNum").text(computerGuess);
     $("#scoreNum").html("0")
     total = 0
@@ -67,35 +71,24 @@ var startGame = function() {
     checkScore()
     scoreReset()
     gemReset()
-    // gem1 = Math.floor(Math.random() * 12)+1;
-    // gem1=Number(gem1);
-    // gem2 = Math.floor(Math.random() * 12)+1;
-    // gem2=Number(gem2);
-    // gem3 = Math.floor(Math.random() * 12)+1;
-    // gem3=Number(gem3);
-    // gem4 = Math.floor(Math.random() * 12)+1;
-    // gem4=Number(gem4);
-    // console.log("gem1: " + gem1);
-}
 
+}
 
 $("#blueGem").click(function(){
 total = gem1 + total 
 $("#scoreNum").text(total)
+
 checkScore()
 scoreReset()
-// computerNumReset()
-// gemReset()
 
 });
 
 $("#greenGem").click(function(){
 total = gem2 + total 
 $("#scoreNum").text(total)
+
 checkScore()
 scoreReset()
-// computerNumReset()
-// gemReset()
 
 });
 
@@ -104,8 +97,6 @@ total = gem3 + total
 $("#scoreNum").text(total)
 checkScore()
 scoreReset()
-// computerNumReset()
-// gemReset()
 
 });
 
@@ -116,8 +107,6 @@ total = gem4 + total
 $("#scoreNum").text(total)
 checkScore()
 scoreReset()
-// computerNumReset()
-// gemReset()
 
 });
 
