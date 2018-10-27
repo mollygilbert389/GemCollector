@@ -33,101 +33,95 @@ checkScore = function(){
     };
 }
 
-//need to reset the computerGuess number
-computerNumReset = function() {
-var newNum = newNum = [Math.floor(Math.random() * 103)+19];
-    newNum=Number(newNum);
- if (total === computerGuess) 
- $("#computerNum").text(newNum);
- else if (computerGuess < total) {
- $("#computerNum").text(newNum);
- }
-};
+// //need to reset the computerGuess number
+// computerNumReset = function() {
+// computerGuess = [Math.floor(Math.random() * 103)+19];
+//     if (computerGuess <= total) {
+//         $("#computerNum").text(computerGuess);
+//     }
+// };
+var gemReset = function () {
+    gem1 = Math.floor(Math.random() * 12)+1;
+    gem1=Number(gem1);
+    gem2 = Math.floor(Math.random() * 12)+1;
+    gem2=Number(gem2);
+    gem3 = Math.floor(Math.random() * 12)+1;
+    gem3=Number(gem3);
+    gem4 = Math.floor(Math.random() * 12)+1;
+    gem4=Number(gem4);
+    console.log("gem1: " + gem1);
+}
 
 // need to set the score back to 0 maybe need to add another function 
-scoreReset = function () {
-    if (total === computerGuess){
+var scoreReset = function () {
+    if (total >= computerGuess){
+    computerGuess = [Math.floor(Math.random() * 103)+19];
+    $("#computerNum").text(computerGuess);
     $("#scoreNum").html("0")
     total = 0
-    }
-     else if (total > computerGuess){
-    $("#scoreNum").html("0")
-    total = 0
+    gemReset();
      }
 }
 
-gemReset = function () {
-   if (total === computerGuess) {
-    gem1 = [Math.floor(Math.random() * 12)+1];
-    gem1=Number(gem1);
-    gem2 = [Math.floor(Math.random() * 12)+1];
-    gem2=Number(gem2);
-    gem3 = [Math.floor(Math.random() * 12)+1];
-    gem3=Number(gem3);
-    gem4 = [Math.floor(Math.random() * 12)+1];
-    gem4=Number(gem4);
-   }
-    else if (total > computerGuess){
-    gem1 = [Math.floor(Math.random() * 12)+1];
-    gem1=Number(gem1);
-    gem2 = [Math.floor(Math.random() * 12)+1];
-    gem2=Number(gem2);
-    gem3 = [Math.floor(Math.random() * 12)+1];
-    gem3=Number(gem3);
-    gem4 = [Math.floor(Math.random() * 12)+1];
-    gem4=Number(gem4);
-}
+var startGame = function() {
+    checkScore()
+    scoreReset()
+    gemReset()
+    // gem1 = Math.floor(Math.random() * 12)+1;
+    // gem1=Number(gem1);
+    // gem2 = Math.floor(Math.random() * 12)+1;
+    // gem2=Number(gem2);
+    // gem3 = Math.floor(Math.random() * 12)+1;
+    // gem3=Number(gem3);
+    // gem4 = Math.floor(Math.random() * 12)+1;
+    // gem4=Number(gem4);
+    // console.log("gem1: " + gem1);
 }
 
 
-
-gem1 = [Math.floor(Math.random() * 12)+1];
- gem1=Number(gem1);
 $("#blueGem").click(function(){
 total = gem1 + total 
 $("#scoreNum").text(total)
 checkScore()
-computerNumReset()
 scoreReset()
-gemReset()
+// computerNumReset()
+// gemReset()
 
 });
 
-gem2 = [Math.floor(Math.random() * 12)+1];
-gem2=Number(gem2);
 $("#greenGem").click(function(){
 total = gem2 + total 
 $("#scoreNum").text(total)
 checkScore()
-computerNumReset()
 scoreReset()
-gemReset()
+// computerNumReset()
+// gemReset()
 
 });
 
-gem3 = [Math.floor(Math.random() * 12)+1];
-gem3=Number(gem3);
 $("#yellowGem").click(function(){
 total = gem3 + total 
 $("#scoreNum").text(total)
 checkScore()
-computerNumReset()
 scoreReset()
-gemReset()
+// computerNumReset()
+// gemReset()
 
 });
 
-gem4 = [Math.floor(Math.random() * 12)+1];
+gem4 = [Math.floor(Math.random() * 11)+1];
 gem4=Number(gem4);
 $("#redGem").click(function(){
 total = gem4 + total 
 $("#scoreNum").text(total)
 checkScore()
-computerNumReset()
 scoreReset()
-gemReset()
+// computerNumReset()
+// gemReset()
 
 });
+
+startGame();
 
 // var comparison = (total === computerGuess)
 //once the user score = the computer number the game is won //if the game is one the wins increases // chnages content win:  
