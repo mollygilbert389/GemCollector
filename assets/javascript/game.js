@@ -25,10 +25,12 @@ $("#computerNum").text(computerGuess);
 checkScore = function(){
     console.log(total, computerGuess)
     if (computerGuess < total){
+        alert("You Lost!")
         lose++;
         document.getElementById("lose").innerHTML = ("You Lose: " + lose)
     }
     else if (total === computerGuess) {
+        alert("You win!")
         win++;
     document.getElementById("win").innerHTML = ("You Escaped! Won: " + win)
     };
