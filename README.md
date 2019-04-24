@@ -4,5 +4,4 @@ This game was created using HTML, CSS, and JavaScript. In this game the computer
 
 Also try it yourself here: https://mollygilbert389.github.io/GemCollector/
 
-<img width="512" alt="GemCollector1" src="https://user-images.githubusercontent.com/29104770/56601129-01cf4d80-65c0-11e9-80a9-8253446f4bf0.PNG">
-
+<img width="1149" alt="Screen Shot 2019-04-23 at 7 41 25 PM" src="https://user-images.githubusercontent.com/29104770/56624752-d9ffda00-65ff-11e9-93c4-814f5213cd1d.png">
