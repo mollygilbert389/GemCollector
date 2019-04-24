@@ -1,20 +1,29 @@
 
 html { 
-    background: url(http://designm.ag/wp-content/uploads/2014/02/19-green-temple-in-jungle-design.jpg) no-repeat center center fixed; 
+    background: url("../Gem.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
 body {
-    color: yellow;
+    color: white;
     text-align: center;
+    background-color: rgba(0, 100, 0, 0.521);
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 40px;
 }
 
 #header {
-   font-size: 75px;
+   padding-top: 10px;
+    font-size: 75px;
    padding-bottom: 10px; 
+
 }
 
 .gem {
@@ -25,7 +34,7 @@ body {
 
 #computerNum {
     font-size: 50px;
-    padding-bottom: 10px; 
+    padding: 10px; 
 
 }
 
@@ -36,7 +45,7 @@ body {
 }
 
 #winLose {
-    padding-bottom: 10px; 
+    padding: 10px; 
 }
 
 #score {
@@ -46,4 +55,9 @@ body {
 
 #scoreNum {
     font-size: 35px;
+}
+
+#gameRules {
+    font-size: 25px;
+    padding: 10px;
 }
